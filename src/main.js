@@ -1,5 +1,5 @@
-import {handle} from './push/main';
+import { handle } from './push/main';
 
-let state = 'hi';
+const state = 'hi';
 
-handle({type: 'init'}, state);
+handle({ type: 'render' }, state);
