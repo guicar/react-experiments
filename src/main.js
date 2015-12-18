@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Application from './Application.js';
+import {handle} from './push/main';
 
-ReactDOM.render(<Application />, document.getElementById('react'));
+let state = 'hi';
+
+handle({type: 'init'}, state);
