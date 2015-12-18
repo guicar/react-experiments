@@ -6,7 +6,9 @@
   "dependencies": {
     "babel-polyfill": "^6.3.14",
     "babel-runtime": "^6.3.19",
-    "npm": "^3.5.2"
+    "npm": "^3.5.2",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
   },
   "devDependencies": {
     "babel-core": "^6.3.21",
