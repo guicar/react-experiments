@@ -7,13 +7,13 @@ let state = {
 export function push(event) {
   console.log('push', event, state);
   switch (event.type) {
-    case 'render':
+    case 'init':
       render(state, push);
       break;
     case 'input':
       const { value } = event;
       state = Object.assign({}, { input: value });
-      push({ type: 'render' });
+      render(state, push);
       break;
     default:
       console.log('Unknown event', event);
