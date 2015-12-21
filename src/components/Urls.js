@@ -5,9 +5,9 @@ export default class Urls extends Component {
   render() {
     const { urls } = this.props;
     return (
-      <div>
-        {urls.map(url => <Url key={url} value={url} />)}
-      </div>
+      <ul>
+        {urls.map(url => <Url key={url.url} url={url.url} size={url.size} />)}
+      </ul>
     );
   }
 }

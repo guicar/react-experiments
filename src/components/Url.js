@@ -2,11 +2,16 @@ import React, { Component, PropTypes } from 'react';
 
 export default class Url extends Component {
   render() {
-    const { value } = this.props;
-    return <p>{value}</p>;
+    const { url, size } = this.props;
+    return (
+      <li>
+        <p>{url}</p>
+        <p>{size}</p>
+      </li>);
   }
 }
 
 Url.propTypes = {
-  value: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired,
 };

@@ -3,7 +3,16 @@ import ReactDOM from 'react-dom';
 import App from '../components/App.js';
 
 let state = {
-  urls: ['gg', 'rr'],
+  urls: [
+    {
+      url: 'gg',
+      size: 12,
+    },
+    {
+      url: 'rr',
+      size: 14,
+    },
+  ],
   url: '',
 };
 
