@@ -1,3 +1,4 @@
-import { push } from './push/index';
+import C from './computation/index';
+import { run } from './computation/run';
 
-push({ type: 'init' });
+run(C.call({ type: 'init' }));
