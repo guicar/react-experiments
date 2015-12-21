@@ -1,5 +1,6 @@
 // Handling of events coming in push.
 import C from './index';
+import { iterPar } from './lib';
 
 function runCommand(command) {
   switch (command.type) {
@@ -19,7 +20,16 @@ function runCommand(command) {
         },
       });
     case 'refresh':
-      return C.ret(); // TODO
+      return C.then(
+        C.call({
+          type: 'store',
+          value: { type: 'get' },
+        }), state =>
+        iterPar(state.urls, url => C.call({
+          type: 'download',
+          value: url,
+        }))
+      );
     default:
       console.log('unknown command type', command);
   }
