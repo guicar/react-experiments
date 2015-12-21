@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Application from '../components/Application.js';
+import App from '../components/App.js';
 
 let state = {
-  input: 'hi',
+  urls: ['gg', 'rr'],
+  url: '',
 };
 
 function render(runCallback) {
   ReactDOM.render(
-    <Application state={state} run={runCallback} />,
+    <App state={state} run={runCallback} />,
     document.getElementById('react'));
 }
 
