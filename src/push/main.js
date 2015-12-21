@@ -1,14 +1,19 @@
 import { render } from './render';
 
-export function handle(event, state) {
+let state = {
+  input: 'hi',
+};
+
+export function push(event) {
+  console.log('push', event, state);
   switch (event.type) {
     case 'render':
-      render(state, handle);
+      render(state, push);
       break;
     case 'input':
       const { value } = event;
-      state = value;
-      handle({ type: 'render' });
+      state = Object.assign({}, { input: value });
+      push({ type: 'render' });
       break;
     default:
       console.log('Unknown event', event);
