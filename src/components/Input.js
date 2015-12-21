@@ -1,7 +1,10 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 
-export default function Input({ value, onChange }) {
-  return <input type="text" value={value} onChange={onChange} />;
+export default class Input extends Component {
+  render() {
+    const { value, onChange } = this.props;
+    return <input type="text" value={value} onChange={onChange} />;
+  }
 }
 
 Input.propTypes = {
