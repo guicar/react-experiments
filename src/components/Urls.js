@@ -6,7 +6,7 @@ export default class Urls extends Component {
     const { urls } = this.props;
     return (
       <div>
-        {urls.map(url => <Url value={url} />)}
+        {urls.map(url => <Url key={url} value={url} />)}
       </div>
     );
   }

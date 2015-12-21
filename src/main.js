@@ -1,4 +1,6 @@
-import C from './computation/index';
-import { run } from './computation/run';
+// import C from './computation/index';
+import { render } from './computation/run';
+import { run } from './computation/log';
 
-run(C.call({ type: 'init' }));
+// run(C.call({ type: 'init' }));
+render(run);

@@ -7,7 +7,7 @@ let state = {
   url: '',
 };
 
-function render(runCallback) {
+export function render(runCallback) {
   ReactDOM.render(
     <App state={state} run={runCallback} />,
     document.getElementById('react'));
