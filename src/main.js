@@ -1,3 +1,3 @@
-import { push } from './push/main';
+import { push } from './push/index';
 
 push({ type: 'init' });
